@@ -1,0 +1,143 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: $fontInter;
+}
+
+body {
+  color: $white;
+}
+
+main {
+  height: 100%;
+  background-color: $veryDarkBlue;
+  padding: 88px 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $darkDesaturatedBlue;
+  text-align: center;
+  border-radius: 8px;
+
+  &-image {
+    height: 240px;
+    background-image: url("../../images/image-header-mobile.jpg");
+    background-color: hsl(277, 67%, 25%);
+    background-blend-mode: overlay;
+    filter: brightness(1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  &-content {
+    padding: 39px 35px 37px;
+  }
+
+  &-title {
+    font-size: 27px;
+    color: $white;
+  }
+
+  &-title span {
+    color:$softViolet
+  }
+
+  &-text {
+    padding-top: 15px;
+    padding-bottom: 43px;
+    line-height: 1.6;
+    font-size: 15px;
+    color: $slightlyTransparentWhite_1;
+  }
+
+  &-content ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 29px;
+    align-items: center;
+    list-style: none;
+    text-transform: uppercase;
+  }
+
+  &-content ul p {
+    padding-top: 6px;
+    font-family: $fontLexendDeca;
+    font-size: 13px;
+    color: $slightlyTransparentWhite_2;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  background-color: #000;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 600px){
+
+  .card-content ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+
+  main {
+    height: 100vh;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    max-width: 1110px;
+    margin: auto;
+
+    &-content {
+      max-width: 570px;
+      padding: 6px 72px 0;
+      text-align: left;
+    }
+
+    &-title {
+      font-size: 35px;
+      padding-right: 10px;
+    }
+
+    &-text {
+      padding: 29px 35px 74px 0;
+    }
+
+    &-image {
+      width: 100%;
+      height: 446px;
+      background-image: url("../../images/image-header-desktop.jpg");
+      border-radius: 0 8px 8px 0;
+      }
+
+    &-content ul {
+      justify-content: start;
+      column-gap: 65px;
+    }
+  }
+
+}
+
