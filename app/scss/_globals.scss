@@ -15,7 +15,7 @@ body {
 main {
   height: 100%;
   background-color: $veryDarkBlue;
-  padding: 88px 24px;
+  padding: 5.5em 1.5em;
 }
 
 .card {
@@ -52,8 +52,8 @@ main {
   }
 
   &-text {
-    padding-top: 15px;
-    padding-bottom: 43px;
+    padding-top: 0.9375em;
+    padding-bottom: 2.6875em;
     line-height: 1.6;
     font-size: 15px;
     color: $slightlyTransparentWhite_1;
@@ -79,7 +79,6 @@ main {
 .attribution {
   font-size: 11px;
   text-align: center;
-  background-color: #000;
 }
 
 .attribution a {
