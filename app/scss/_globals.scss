@@ -4,17 +4,14 @@
   margin: 0;
 }
 
-html {
-  font-family: $fontInter;
-}
-
 body {
-  color: $white;
+  background-color: $veryDarkBlue;
+  font-family: $fontInter;
+  color:$white;
 }
 
 main {
   height: 100%;
-  background-color: $veryDarkBlue;
   padding: 5.5em 1.5em;
 }
 
