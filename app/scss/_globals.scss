@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -7,11 +9,10 @@
 body {
   background-color: $veryDarkBlue;
   font-family: $fontInter;
-  color:$white;
+  color: $white;
 }
 
 main {
-  height: 100%;
   padding: 5.5em 1.5em;
 }
 
@@ -23,7 +24,7 @@ main {
   border-radius: 8px;
 
   &-image {
-    height: 240px;
+    height: 15rem;
     background-image: url("../../images/image-header-mobile.jpg");
     background-color: hsl(277, 67%, 25%);
     background-blend-mode: overlay;
@@ -36,45 +37,53 @@ main {
   }
 
   &-content {
-    padding: 39px 35px 37px;
+    padding: 2.4375rem 2.1875rem 2.3125rem;
   }
 
   &-title {
-    font-size: 27px;
+    font-size: 1.6875rem;
     color: $white;
   }
 
   &-title span {
-    color:$softViolet
+    color: $softViolet;
   }
 
   &-text {
     padding-top: 0.9375em;
     padding-bottom: 2.6875em;
     line-height: 1.6;
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: $slightlyTransparentWhite_1;
   }
 
-  &-content ul{
+  &-content ul {
     display: flex;
     flex-direction: column;
-    row-gap: 29px;
+    row-gap: 1.8125rem;
     align-items: center;
     list-style: none;
     text-transform: uppercase;
   }
 
   &-content ul p {
-    padding-top: 6px;
+    padding-top: 0.375rem;
     font-family: $fontLexendDeca;
-    font-size: 13px;
+    font-size: 0.8125rem;
     color: $slightlyTransparentWhite_2;
   }
 }
 
+footer {
+  position: relative;
+}
+
 .attribution {
-  font-size: 11px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  font-size: 0.6875rem;
   text-align: center;
 }
 
@@ -82,9 +91,16 @@ main {
   color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (min-width: 600px){
+@media (min-width: 23.5rem) {
+  /* 376px */
+  main {
+    padding: 11.0625rem 2rem;
+  }
+}
 
-  .card-content ul{
+@media (min-width: 37.5rem) {
+  /* 600px */
+  .card-content ul {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -93,47 +109,41 @@ main {
   }
 }
 
-@media only screen and (min-width: 900px) {
-
-  main {
-    height: 100vh;
-  }
-  
+@media (min-width: 56.25rem) {
+  /* 900px */
   .card {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    max-width: 1110px;
+    max-width: 69.375rem;
     margin: auto;
 
     &-content {
-      max-width: 570px;
-      padding: 6px 72px 0;
+      max-width: 35.625;
+      padding: 0.375rem 4.5rem 0;
       text-align: left;
     }
 
     &-title {
-      font-size: 35px;
-      padding-right: 10px;
+      font-size: 2.1875rem;
+      padding-right: 0.625rem;
     }
 
     &-text {
-      padding: 29px 35px 74px 0;
+      padding: 1.8125rem 2.1875rem 4.625rem 0;
     }
 
     &-image {
       width: 100%;
-      height: 446px;
+      height: 27.875rem;
       background-image: url("../../images/image-header-desktop.jpg");
       border-radius: 0 8px 8px 0;
-      }
+    }
 
     &-content ul {
       justify-content: start;
-      column-gap: 65px;
+      column-gap: 4.0625rem;
     }
   }
-
 }
-
